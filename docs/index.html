@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <meta name="description" content="AgentPass explores a safer, verifiable path for AI agents: discover, request authority, check permissions, act, verify and produce receipts. Explore an honest offline proof of concept.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AgentPass — Safer permissions for AI agents">
+  <meta property="og:description" content="Open-source AI agent identity and permission research, starting with a fully offline simulator and public tests.">
+  <meta name="robots" content="index,follow">
+  <title>AgentPass — A permissions and trust layer for AI agents</title>
+  <style>
+    :root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#ecf2ff;background:#0a1120;font-synthesis:none;line-height:1.6}
+    *{box-sizing:border-box}
+    body{margin:0;background:radial-gradient(ellipse at 90% 0%,#132f50 0%,#0a1120 48%) no-repeat}
+    a{color:#9ad8ff}a:hover{text-decoration:underline}
+    .wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+    header{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:24px 0;border-bottom:1px solid #25354d}
+    .brand{display:flex;align-items:center;gap:.7rem;color:#fff;font-weight:750;font-size:1.1rem;text-decoration:none;letter-spacing:-.03em}
+    .mark{background:linear-gradient(135deg,#4ce5b1,#52aaff);color:#081623;border-radius:11px;padding:4px 11px;font-weight:900}
+    nav{display:flex;gap:1rem;font-size:.93rem;flex-wrap:wrap}
+    nav a{text-decoration:none;color:#c8d9ee}
+    main{padding:88px 0 55px}
+    .eyebrow{color:#69e0bf;font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;font-weight:800}
+    h1{font-size:clamp(2.7rem,7vw,5.8rem);letter-spacing:-.06em;line-height:1.05;max-width:930px;margin:20px 0}
+    .lead{font-size:clamp(1.1rem,2.1vw,1.35rem);color:#b8cadd;max-width:760px}
+    .actions{display:flex;gap:14px;flex-wrap:wrap;margin:30px 0}
+    .button{display:inline-block;padding:13px 22px;border-radius:10px;background:#5be2bb;color:#061321;font-weight:750;text-decoration:none}
+    .button.secondary{background:transparent;border:1px solid #516982;color:#e6f3ff}
+    .disclosure{border:1px solid #395573;border-radius:14px;padding:18px 22px;color:#d7e3f1;background:#101e32;max-width:860px;margin:45px 0}
+    h2{font-size:clamp(1.6rem,3vw,2.2rem);letter-spacing:-.035em;margin-top:70px}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:25px}
+    .tile{border:1px solid #284058;background:#101e30;border-radius:16px;padding:24px;min-height:170px}
+    .tile span{font-size:.85rem;color:#78e3c7}
+    .tile h3{margin:5px 0 8px;font-size:1.1rem}
+    .tile p{margin:0;color:#b5c9df;font-size:.94rem}
+    code,pre{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}
+    pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#071321;border:1px solid #2b4661;border-radius:12px;padding:21px;color:#c5f8df}
+    .columns{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    .small{color:#abc1d4;font-size:.9rem}
+    footer{margin-top:95px;border-top:1px solid #273b54;padding:30px 0;color:#a9bfd3;font-size:.88rem}
+    @media(max-width:720px){.grid{grid-template-columns:1fr}.columns{grid-template-columns:1fr}main{padding-top:58px}header{align-items:flex-start;flex-direction:column}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important}}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="brand" href="https://github.com/AbdulkadirKhoujja/agent-pass"><span class="mark">AP</span> AgentPass</a>
+    <nav aria-label="Main navigation">
+      <a href="#how-it-works">How it works</a>
+      <a href="#demo">Run a demo</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://github.com/AbdulkadirKhoujja/agent-pass">GitHub</a>
+    </nav>
+  </header>
+  <main>
+    <div class="eyebrow">Open source · experimental · offline-first proof of concept</div>
+    <h1>AI agents should know what they're allowed to do.</h1>
+    <p class="lead">AgentPass is exploring a clearer path from discovery and delegated permissions to independently checked actions and receipts. We start with a tiny public simulator that is honest about what it can and cannot prove.</p>
+    <div class="actions">
+      <a class="button" href="https://github.com/AbdulkadirKhoujja/agent-pass">Explore the open-source code</a>
+      <a class="button secondary" href="#demo">Run the local demo</a>
+    </div>
+    <aside class="disclosure" aria-label="Current implementation limitations">
+      <strong>Important: this is not live agent identity infrastructure.</strong>
+      The current implementation is a local, synthetic simulator. Its `agent_id` is unverified, its consent flag is not actual consent, its actions are fictitious, and its receipts are unsigned checksums. No AuthZEN, MCP or A2A compliance is claimed.
+    </aside>
+    <section id="how-it-works" aria-labelledby="flow-title">
+      <h2 id="flow-title">Seven steps toward a trustworthy action</h2>
+      <div class="grid">
+        <div class="tile"><span>01 / Discover</span><h3>Find capabilities</h3><p>Understand the service and the actions it declares.</p></div>
+        <div class="tile"><span>02 / Understand</span><h3>Read the boundaries</h3><p>Check resources, terms and restrictions before doing anything.</p></div>
+        <div class="tile"><span>03 / Request</span><h3>Obtain authority</h3><p>Future: authenticate the right actors and capture explicit scoped consent.</p></div>
+        <div class="tile"><span>04 / Authorize</span><h3>Enforce policy</h3><p>Start from deny-by-default decisions, not inferred intentions.</p></div>
+        <div class="tile"><span>05 / Execute</span><h3>Perform one action</h3><p>Currently, only a synthetic catalogue-read operation.</p></div>
+        <div class="tile"><span>06–07 / Verify &amp; receipt</span><h3>Show what happened</h3><p>Future: independently verifiable, privacy-preserving records.</p></div>
+      </div>
+    </section>
+    <section id="demo" aria-labelledby="demo-title">
+      <h2 id="demo-title">Try it without accounts, tokens or infrastructure.</h2>
+      <p class="small">Python 3.10+. No third-party packages or network requests are needed.</p>
+      <pre><code>git clone https://github.com/AbdulkadirKhoujja/agent-pass.git
+cd agent-pass
+python -m agentpass
+python -m agentpass examples/denied_request.json
+python -m unittest discover -s tests -v</code></pre>
+      <p>Watch an allowed synthetic request generate an example result, then watch an unsupported action be denied. Inspect the source and submit an issue if the behaviour is unclear.</p>
+    </section>
+    <section aria-labelledby="ecosystem-title">
+      <h2 id="ecosystem-title">Build a product. Contribute to its ecosystem.</h2>
+      <div class="columns">
+        <div class="tile"><span>70% · product</span><h3>Usable and verifiable foundations</h3><p>Better safety checks, documented contracts, developer tooling, reproducible benchmarks and genuinely working interfaces.</p></div>
+        <div class="tile"><span>30% · ecosystem</span><h3>Upstream, not unsolicited advertising</h3><p>Useful independent contributions around OpenID AuthZEN, A2A and MCP. No affiliation or compliance endorsements are implied.</p></div>
+      </div>
+    </section>
+    <section id="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">Frequently asked questions</h2>
+      <h3>Can AgentPass authenticate a real AI agent today?</h3>
+      <p>No. The current demo does not prove identity or delegated consent.</p>
+      <h3>Can I register this as an MCP server or A2A agent?</h3>
+      <p>Not yet. There are no implemented compatible server endpoints or published Agent Cards. We will provide accurate discovery metadata after the integrations exist and pass tests.</p>
+      <h3>Are the receipts cryptographically verifiable?</h3>
+      <p>Not as authentication evidence. Current receipts contain an unsigned SHA-256 consistency checksum that any actor can recompute.</p>
+      <h3>How can I contribute?</h3>
+      <p>Read the <a href="https://github.com/AbdulkadirKhoujja/agent-pass/blob/main/CONTRIBUTING.md">contributor guide</a> and suggest a focused, testable improvement.</p>
+    </section>
+  </main>
+  <footer>AgentPass is an independent research project. Apache License 2.0. <a href="https://github.com/AbdulkadirKhoujja/agent-pass/blob/main/SECURITY.md">Security</a> · <a href="https://github.com/AbdulkadirKhoujja/agent-pass/blob/main/docs/BENCHMARKS.md">Benchmark policy</a></footer>
+</div>
+</body>
+</html>
