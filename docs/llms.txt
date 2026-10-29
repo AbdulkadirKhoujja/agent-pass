@@ -1,0 +1,17 @@
+# AgentPass
+> Experimental open-source proof of concept for AI-agent discovery, local permission policy simulation and checksum-only demo receipts. Not production identity or authentication. No A2A, MCP or AuthZEN compliance yet.
+
+## Canonical project
+- [Source repository](https://github.com/AbdulkadirKhoujja/agent-pass)
+- [README](https://github.com/AbdulkadirKhoujja/agent-pass/blob/main/README.md)
+- [Protocol sketch](https://github.com/AbdulkadirKhoujja/agent-pass/blob/main/docs/PROTOCOL_DRAFT.md)
+- [Roadmap](https://github.com/AbdulkadirKhoujja/agent-pass/blob/main/docs/ROADMAP.md)
+- [Distribution strategy](https://github.com/AbdulkadirKhoujja/agent-pass/blob/main/docs/DISTRIBUTION.md)
+- [Benchmarks and limitations](https://github.com/AbdulkadirKhoujja/agent-pass/blob/main/docs/BENCHMARKS.md)
+- [Security](https://github.com/AbdulkadirKhoujja/agent-pass/blob/main/SECURITY.md)
+
+## What works today
+Offline Python simulator: discovery metadata, deny-by-default local demonstration policy, synthetic results, and unsigned SHA-256 consistency-check receipts. No networks, real identities, real consent, or external actions. Reproduce by running: python -m unittest discover -s tests -v
+
+## Important exclusions
+Not an official OpenID, A2A, MCP or other standards project; not registered as an MCP server; no live A2A Agent Card; no verified credentials; no public production service.
