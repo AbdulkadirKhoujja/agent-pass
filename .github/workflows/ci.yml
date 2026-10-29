@@ -24,4 +24,4 @@ jobs:
       - name: Run offline tests
         run: python -m unittest discover -s tests -v
       - name: Check Python syntax
-        run: python -m compileall -q agentpass
+        run: python -m compileall -q mandovyn

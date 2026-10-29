@@ -18,7 +18,7 @@ _DEMO_ITEMS = ["alpha", "beta"]
 def describe() -> dict[str, Any]:
     """Discovery document for the local simulator (not an A2A Agent Card)."""
     return {
-        "name": "AgentPass demo",
+        "name": "Mandovyn demo",
         "version": "0.1.0",
         "kind": "offline-simulator",
         "supported_action": "demo:read",
@@ -56,7 +56,7 @@ def process(request: Any) -> dict[str, Any]:
     # No actual identity, authority, signature or delegated consent is verified.
     result = {"items": list(_DEMO_ITEMS), "mode": "synthetic-data"}
     receipt = {
-        "kind": "agentpass-demo-checksum",
+        "kind": "mandovyn-demo-checksum",
         "request": dict(request),
         "result": result,
         "checksum_sha256": _checksum(request, result),
@@ -75,7 +75,7 @@ def verify_demo_receipt(receipt: Any) -> bool:
     """Check only internal consistency; does NOT authenticate a receipt."""
     if not isinstance(receipt, dict):
         return False
-    if receipt.get("kind") != "agentpass-demo-checksum":
+    if receipt.get("kind") != "mandovyn-demo-checksum":
         return False
     request = receipt.get("request")
     result = receipt.get("result")

@@ -2,7 +2,7 @@
 
 import unittest
 
-from agentpass import describe, process, verify_demo_receipt
+from mandovyn import describe, process, verify_demo_receipt
 
 
 def valid_request():
@@ -14,7 +14,7 @@ def valid_request():
     }
 
 
-class AgentPassDemoTests(unittest.TestCase):
+class MandovynDemoTests(unittest.TestCase):
     def test_discovery_identifies_demo_limits(self):
         info = describe()
         self.assertEqual(info["kind"], "offline-simulator")

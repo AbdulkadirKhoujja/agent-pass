@@ -1,4 +1,4 @@
-"""Run the offline AgentPass simulator."""
+"""Run the offline Mandovyn simulator."""
 
 import argparse
 import json
@@ -8,7 +8,7 @@ from .core import describe, process
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Offline AgentPass demo; no real authorizations")
+    parser = argparse.ArgumentParser(description="Offline Mandovyn demo; no real authorizations")
     parser.add_argument("request_json", nargs="?", type=Path, help="Path to an example JSON request")
     parser.add_argument("--describe", action="store_true", help="Print demo discovery capabilities")
     args = parser.parse_args()
