@@ -44,6 +44,17 @@ An allowed request produces a synthetic catalogue result and a **checksum-only**
 
 The repository includes a search-readable landing page and `llms.txt`. Discoverability does not make this implementation an official MCP server or A2A agent. Registry entries and protocol conformance will follow only after actual compatible endpoints exist.
 
+## Physical-world and machine interactions (research direction)
+
+AgentPass's longer-term scope includes **permissioned agent interactions with services, machines and IoT devices**. All connected-device access, capability discovery, device/user attestation, safety interlocks, and audit records remain future work. This repository's demo does not contact any device.
+
+- [Bring Your Agent evaluation plan](docs/BRING_YOUR_AGENT.md)
+- [Machine and IoT boundary plan](docs/IOT_SCOPE.md)
+
+## Independent naming notice
+
+A different public project also uses **AgentPass** for agent authorization, including an initiative developed by Clerk at [agentpass.com](https://agentpass.com/). This repository is independent, is not affiliated or endorsed, and does not claim that brand or its protocol. [Naming review](docs/NAME_COLLISION.md) is required before substantive promotion.
+
 ## Trust and openness
 
 Do not store credentials, private user workflows, identity documents, secrets, production receipts, or real authorization decisions in this repository. Never infer consent from discovery or a model-generated statement. Report vulnerabilities privately, as described in [SECURITY.md](SECURITY.md).
