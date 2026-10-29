@@ -1,0 +1,6 @@
+{
+  "agent_id": "example-agent-unverified",
+  "action": "demo:read",
+  "resource": "demo:catalog",
+  "consent": true
+}
