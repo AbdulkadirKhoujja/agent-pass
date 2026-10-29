@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+venv/
+dist/
+build/
+*.egg-info/
+.coverage
+htmlcov/
+
+# Editors & local configuration
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+.DS_Store
+
+# Never commit private material
+*.pem
+*.key
+secrets/
+private/
