@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> **Project moved to [Mandovyn](https://github.com/AbdulkadirKhoujja/mandovyn).** This original repository is retained for the early AgentPass → Mandovyn development history. Use the new repository for code, issues, documentation and contributions. The new repository is a file migration, not a Git-history transfer.
+
 # Mandovyn
 
 **A public, experimental foundation for AI-agent discovery, delegated permissions, action verification, and receipts.**
