@@ -1,15 +1,15 @@
-# AgentPass
+# Mandovyn
 
 **A public, experimental foundation for AI-agent discovery, delegated permissions, action verification, and receipts.**
 
-[![CI](https://github.com/AbdulkadirKhoujja/agent-pass/actions/workflows/ci.yml/badge.svg)](https://github.com/AbdulkadirKhoujja/agent-pass/actions/workflows/ci.yml)
+[![CI](https://github.com/AbdulkadirKhoujja/mandovyn/actions/workflows/ci.yml/badge.svg)](https://github.com/AbdulkadirKhoujja/mandovyn/actions/workflows/ci.yml)
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 
 > **Status: early proof of concept, not a production authentication, identity, authorization, or payment service.** The bundled simulator uses fictitious agents and local policy checks; it does **not** verify actual identities or execute real-world actions. No A2A, MCP, or AuthZEN compliance is claimed.
 
 ## The idea
 
-AI agents need predictable ways to discover what they may do, request user-granted authority, act within those boundaries, and explain what happened. AgentPass explores a simple, auditable journey:
+AI agents need predictable ways to discover what they may do, request user-granted authority, act within those boundaries, and explain what happened. Mandovyn explores a simple, auditable journey:
 
 `Discover → Understand → Request authority → Check permission → Simulate action → Verify → Produce receipt`
 
@@ -20,8 +20,8 @@ The initial demo is intentionally offline and dependency-free. Real identity val
 Requires Python 3.10 or newer. No third-party dependencies.
 
 ```sh
-python -m agentpass
-python -m agentpass examples/allowed_request.json
+python -m mandovyn
+python -m mandovyn examples/allowed_request.json
 python -m unittest discover -s tests -v
 ```
 
@@ -46,18 +46,22 @@ The repository includes a search-readable landing page and `llms.txt`. Discovera
 
 ## Physical-world and machine interactions (research direction)
 
-AgentPass's longer-term scope includes **permissioned agent interactions with services, machines and IoT devices**. All connected-device access, capability discovery, device/user attestation, safety interlocks, and audit records remain future work. This repository's demo does not contact any device.
+Mandovyn's longer-term scope includes **permissioned agent interactions with services, machines and IoT devices**. All connected-device access, capability discovery, device/user attestation, safety interlocks, and audit records remain future work. This repository's demo does not contact any device.
 
 - [Bring Your Agent evaluation plan](docs/BRING_YOUR_AGENT.md)
 - [Machine and IoT boundary plan](docs/IOT_SCOPE.md)
 
-## Independent naming notice
+## Naming and independence
 
-A different public project also uses **AgentPass** for agent authorization, including an initiative developed by Clerk at [agentpass.com](https://agentpass.com/). This repository is independent, is not affiliated or endorsed, and does not claim that brand or its protocol. [Naming review](docs/NAME_COLLISION.md) is required before substantive promotion.
+Mandovyn was previously developed under the working name **AgentPass**. We changed it to distinguish this independent project from an unrelated product. See [naming history](docs/NAMING.md). This project does not claim affiliation with Clerk or any standards organization.
 
 ## Trust and openness
 
 Do not store credentials, private user workflows, identity documents, secrets, production receipts, or real authorization decisions in this repository. Never infer consent from discovery or a model-generated statement. Report vulnerabilities privately, as described in [SECURITY.md](SECURITY.md).
+
+## Domain ownership
+
+The `mandovyn.com` domain was reported available when checked, but is **not registered or owned by this project** at this stage. Use GitHub as the only verified canonical contact point until registration is confirmed.
 
 ## License
 

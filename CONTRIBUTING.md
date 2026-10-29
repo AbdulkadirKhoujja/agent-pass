@@ -1,4 +1,4 @@
-# Contributing to AgentPass
+# Contributing to Mandovyn
 
 Thanks for contributing to a small, independent open-source experiment.
 
@@ -21,7 +21,7 @@ Thanks for contributing to a small, independent open-source experiment.
 
 ## Contribution boundaries
 
-Do not add credentials, personal/client data, generated spam, background web crawlers, mass outreach, benchmark claims without traceable fixtures, fake receipts, or alleged official standard endorsements. Do not contact upstream maintainers on AgentPass's behalf without a relevant contribution ready for review.
+Do not add credentials, personal/client data, generated spam, background web crawlers, mass outreach, benchmark claims without traceable fixtures, fake receipts, or alleged official standard endorsements. Do not contact upstream maintainers on Mandovyn's behalf without a relevant contribution ready for review.
 
 Project participation is governed by respectful, civil collaboration. Substantial protocol changes require a design issue and maintainer approval before merger.
 

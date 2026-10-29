@@ -1,6 +1,6 @@
 # Security policy
 
-**Status:** AgentPass is an experimental offline simulator, not an authentication or authorization service. Do not rely on it to protect assets, credentials, money, private data, or production access.
+**Status:** Mandovyn is an experimental offline simulator, not an authentication or authorization service. Do not rely on it to protect assets, credentials, money, private data, or production access.
 
 ## Reporting
 

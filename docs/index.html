@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark light">
-  <meta name="description" content="AgentPass explores a safer, verifiable path for AI agents: discover, request authority, check permissions, act, verify and produce receipts. Explore an honest offline proof of concept.">
+  <meta name="description" content="Mandovyn explores a safer, verifiable path for AI agents: discover, request authority, check permissions, act, verify and produce receipts. Explore an honest offline proof of concept.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="AgentPass — Safer permissions for AI agents">
+  <meta property="og:title" content="Mandovyn — Safer permissions for AI agents">
   <meta property="og:description" content="Open-source AI agent identity and permission research, starting with a fully offline simulator and public tests.">
   <meta name="robots" content="index,follow">
-  <title>AgentPass — A permissions and trust layer for AI agents</title>
+  <title>Mandovyn — A permissions and trust layer for AI agents</title>
   <style>
     :root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#ecf2ff;background:#0a1120;font-synthesis:none;line-height:1.6}
     *{box-sizing:border-box}
@@ -47,20 +47,20 @@
 <body>
 <div class="wrap">
   <header>
-    <a class="brand" href="https://github.com/AbdulkadirKhoujja/agent-pass"><span class="mark">AP</span> AgentPass</a>
+    <a class="brand" href="https://github.com/AbdulkadirKhoujja/mandovyn"><span class="mark">M</span> Mandovyn</a>
     <nav aria-label="Main navigation">
       <a href="#how-it-works">How it works</a>
       <a href="#demo">Run a demo</a>
       <a href="#faq">FAQ</a>
-      <a href="https://github.com/AbdulkadirKhoujja/agent-pass">GitHub</a>
+      <a href="https://github.com/AbdulkadirKhoujja/mandovyn">GitHub</a>
     </nav>
   </header>
   <main>
     <div class="eyebrow">Open source · experimental · offline-first proof of concept</div>
     <h1>AI agents should know what they're allowed to do.</h1>
-    <p class="lead">AgentPass is exploring a clearer path from discovery and delegated permissions to independently checked actions and receipts. We start with a tiny public simulator that is honest about what it can and cannot prove.</p>
+    <p class="lead">Mandovyn is exploring a clearer path from discovery and delegated permissions to independently checked actions and receipts. We start with a tiny public simulator that is honest about what it can and cannot prove.</p>
     <div class="actions">
-      <a class="button" href="https://github.com/AbdulkadirKhoujja/agent-pass">Explore the open-source code</a>
+      <a class="button" href="https://github.com/AbdulkadirKhoujja/mandovyn">Explore the open-source code</a>
       <a class="button secondary" href="#demo">Run the local demo</a>
     </div>
     <aside class="disclosure" aria-label="Current implementation limitations">
@@ -81,10 +81,10 @@
     <section id="demo" aria-labelledby="demo-title">
       <h2 id="demo-title">Try it without accounts, tokens or infrastructure.</h2>
       <p class="small">Python 3.10+. No third-party packages or network requests are needed.</p>
-      <pre><code>git clone https://github.com/AbdulkadirKhoujja/agent-pass.git
-cd agent-pass
-python -m agentpass
-python -m agentpass examples/denied_request.json
+      <pre><code>git clone https://github.com/AbdulkadirKhoujja/mandovyn.git
+cd mandovyn
+python -m mandovyn
+python -m mandovyn examples/denied_request.json
 python -m unittest discover -s tests -v</code></pre>
       <p>Watch an allowed synthetic request generate an example result, then watch an unsupported action be denied. Inspect the source and submit an issue if the behaviour is unclear.</p>
     </section>
@@ -97,17 +97,17 @@ python -m unittest discover -s tests -v</code></pre>
     </section>
     <section id="faq" aria-labelledby="faq-title">
       <h2 id="faq-title">Frequently asked questions</h2>
-      <h3>Can AgentPass authenticate a real AI agent today?</h3>
+      <h3>Can Mandovyn authenticate a real AI agent today?</h3>
       <p>No. The current demo does not prove identity or delegated consent.</p>
       <h3>Can I register this as an MCP server or A2A agent?</h3>
       <p>Not yet. There are no implemented compatible server endpoints or published Agent Cards. We will provide accurate discovery metadata after the integrations exist and pass tests.</p>
       <h3>Are the receipts cryptographically verifiable?</h3>
       <p>Not as authentication evidence. Current receipts contain an unsigned SHA-256 consistency checksum that any actor can recompute.</p>
       <h3>How can I contribute?</h3>
-      <p>Read the <a href="https://github.com/AbdulkadirKhoujja/agent-pass/blob/main/CONTRIBUTING.md">contributor guide</a> and suggest a focused, testable improvement.</p>
+      <p>Read the <a href="https://github.com/AbdulkadirKhoujja/mandovyn/blob/main/CONTRIBUTING.md">contributor guide</a> and suggest a focused, testable improvement.</p>
     </section>
   </main>
-  <footer>AgentPass is independent research, not affiliated with other AgentPass-branded services. Apache License 2.0. <a href="https://github.com/AbdulkadirKhoujja/agent-pass/blob/main/SECURITY.md">Security</a> · <a href="https://github.com/AbdulkadirKhoujja/agent-pass/blob/main/docs/BENCHMARKS.md">Benchmark policy</a></footer>
+  <footer>Mandovyn is independent research, not affiliated with other Mandovyn-branded services. Apache License 2.0. <a href="https://github.com/AbdulkadirKhoujja/mandovyn/blob/main/SECURITY.md">Security</a> · <a href="https://github.com/AbdulkadirKhoujja/mandovyn/blob/main/docs/BENCHMARKS.md">Benchmark policy</a> · <a href="https://github.com/AbdulkadirKhoujja/mandovyn/blob/main/docs/NAMING.md">Naming history</a></footer>
 </div>
 </body>
 </html>
