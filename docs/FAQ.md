@@ -1,8 +1,8 @@
-# AgentPass FAQ
+# Mandovyn FAQ
 
-**What is AgentPass?** An open-source experiment in AI-agent discovery, authorized actions and receipts. The current Python demonstration is entirely offline and uses synthetic data.
+**What is Mandovyn?** An open-source experiment in AI-agent discovery, authorized actions and receipts. The current Python demonstration is entirely offline and uses synthetic data.
 
-**Is AgentPass usable for real authentication?** No. The initial `agent_id` and `consent` fields are caller-supplied test inputs, not evidence.
+**Is Mandovyn usable for real authentication?** No. The initial `agent_id` and `consent` fields are caller-supplied test inputs, not evidence.
 
 **Does it support MCP or A2A today?** No. No compatible MCP server or A2A service has been deployed or registered.
 

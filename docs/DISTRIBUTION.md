@@ -36,7 +36,7 @@ These are planning allocations, not a claim of time already spent or conversion 
 - Demo: “A denied action is a successful safety test.”
 - Technical note: “Why an unsigned hash is not an authenticated receipt.”
 - Comparison: “Authorization vs discovery: AuthZEN, A2A and MCP solve different layers.”
-- Tutorial: “Run the AgentPass offline simulator in 60 seconds.”
+- Tutorial: “Run the Mandovyn offline simulator in 60 seconds.”
 
 Every post links to a working demonstration and states current limitations. Do not mass-post identical text, manipulate search, fabricate adoption, or create standards-affiliation confusion.
 

@@ -1,6 +1,6 @@
-# AgentPass scope: services, machines and agentic IoT
+# Mandovyn scope: services, machines and agentic IoT
 
-AgentPass began as a proposed permission and verification layer for AI agents interacting safely with **services, software tools, machines and connected devices**. This document keeps that original ambition visible without representing it as a shipped capability.
+Mandovyn began as a proposed permission and verification layer for AI agents interacting safely with **services, software tools, machines and connected devices**. This document keeps that original ambition visible without representing it as a shipped capability.
 
 ## Trust boundary
 

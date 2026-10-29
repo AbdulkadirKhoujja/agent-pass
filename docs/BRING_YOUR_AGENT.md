@@ -13,7 +13,7 @@ Test whether different AI assistant environments can discover an appropriately d
 - Gemini-based agents
 - Open-source / local agents
 
-No vendor is affiliated with or endorses AgentPass merely by participating in future tests.
+No vendor is affiliated with or endorses Mandovyn merely by participating in future tests.
 
 ## Protocol evaluation dimensions
 

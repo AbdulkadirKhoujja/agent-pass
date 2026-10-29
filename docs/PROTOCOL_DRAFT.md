@@ -1,4 +1,4 @@
-# AgentPass protocol sketch (NOT a specification)
+# Mandovyn protocol sketch (NOT a specification)
 
 This document describes a possible future protocol, not a deployed standard or a production API.
 
@@ -14,7 +14,7 @@ This document describes a possible future protocol, not a deployed standard or a
 
 ## Current, implemented simulator
 
-Run `python -m agentpass --describe`, then `python -m agentpass examples/allowed_request.json`.
+Run `python -m mandovyn --describe`, then `python -m mandovyn examples/allowed_request.json`.
 
 The following input is **not a real permission grant**:
 

@@ -1,6 +1,6 @@
 # Ecosystem contribution queue (30% track)
 
-The objective is to be **useful upstream**, not to plant AgentPass advertisements.
+The objective is to be **useful upstream**, not to plant Mandovyn advertisements.
 
 ## Target 1: OpenID AuthZEN
 
@@ -14,7 +14,7 @@ Reference: https://openid.net/wg/authzen/specifications/ — Authorization API 1
 
 Reference: https://a2a-protocol.org/latest/topics/agent-discovery/
 
-**Candidate contribution:** improve safe and accessible Agent Card discovery guidance or add a negative test around missing/unsafe metadata. Do **not** publish `/.well-known/agent-card.json` for AgentPass until a real A2A server and correct card exist.
+**Candidate contribution:** improve safe and accessible Agent Card discovery guidance or add a negative test around missing/unsafe metadata. Do **not** publish `/.well-known/agent-card.json` for Mandovyn until a real A2A server and correct card exist.
 
 **Current status:** research target only.
 
@@ -29,7 +29,7 @@ Reference: https://modelcontextprotocol.io/ and https://registry.modelcontextpro
 ## Review process
 
 1. Select a currently open upstream issue and read maintainer guidelines.
-2. Produce a minimal, independent reproducer or documentation fix with no AgentPass dependency.
+2. Produce a minimal, independent reproducer or documentation fix with no Mandovyn dependency.
 3. Verify behavior against the current upstream specification and tests.
 4. Ask for feedback where appropriate; do not auto-submit mass PRs or use promotional comments.
 5. Report outcome precisely: proposed / opened / under review / merged / rejected; never call “drafted” merged.
